@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Yatra Lok</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Yatra Lok</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="tourist_login.html">Login</a></li>
+                <li><a href="tourist_signup.html" class="btn-primary">Sign Up</a></li>
+            </ul>
+            <div class="navbar-right">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <span class="theme-toggle-icon">🌙</span>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Dashboard Section -->
+        <section class="form-section">
+            <div class="form-container">
+                <div class="glass-card form-card">
+                    <h2 class="form-title">Select Your Destination</h2>
+                    <p class="form-subtitle">Choose your preferred location to explore amazing places</p>
+                    
+                    <form class="dashboard-form" id="dashboardForm">
+                        <!-- Country Dropdown -->
+                        <div class="form-group">
+                            <label for="country">Country <span class="required">*</span></label>
+                            <select id="country" name="country" required>
+                                <option value="">Select Country</option>
+                            </select>
+                            <input type="text" id="countryCustom" name="countryCustom" placeholder="Enter country" style="display:none; margin-top:8px;" />
+                        </div>
+
+                        <!-- State Dropdown -->
+                        <div class="form-group">
+                            <label for="state">State <span class="required">*</span></label>
+                            <select id="state" name="state" required>
+                                <option value="">Select State</option>
+                            </select>
+                            <input type="text" id="stateCustom" name="stateCustom" placeholder="Enter state" style="display:none; margin-top:8px;" />
+                        </div>
+
+                        <!-- City Dropdown -->
+                        <div class="form-group">
+                            <label for="city">City <span class="required">*</span></label>
+                            <select id="city" name="city" required>
+                                <option value="">Select City</option>
+                            </select>
+                            <input type="text" id="cityCustom" name="cityCustom" placeholder="Enter city" style="display:none; margin-top:8px;" />
+                        </div>
+
+                        <!-- Next Button -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn-neon btn-primary btn-submit">Next</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Floating SOS Button -->
+    <a href="tel:ADMIN_NUMBER" class="sos-button" id="sosButton">SOS</a>
+    
+    <script src="app.js"></script>
+</body>
+</html>
+

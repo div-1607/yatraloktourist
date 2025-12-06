@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Yatra Lok</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Yatra Lok</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="admin_dashboard.html">Admin Dashboard</a></li>
+                <li><a href="admin_login.html">Logout</a></li>
+            </ul>
+            <div class="navbar-right">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <span class="theme-toggle-icon">🌙</span>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Admin Dashboard Section -->
+        <section class="admin-dashboard-section">
+            <div class="admin-dashboard-container">
+                <!-- Search Form -->
+                <div class="glass-card search-card">
+                    <h2 class="dashboard-title">Tourist Tracker</h2>
+                    <p class="dashboard-subtitle">Enter Tourist Digital ID to view details</p>
+                    
+                    <form class="tourist-search-form" id="touristSearchForm">
+                        <div class="search-group">
+                            <input 
+                                type="text" 
+                                id="touristDigitalID" 
+                                name="touristDigitalID" 
+                                required 
+                                placeholder="Enter Tourist Digital ID (e.g., YT12345)"
+                                autocomplete="off"
+                            >
+                            <button type="submit" class="btn-neon btn-primary search-btn">Search</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Tourist Details Display -->
+                <div id="touristDetailsContainer" class="tourist-details-container" style="display: none;">
+                    <!-- Live Location Card -->
+                    <div class="glass-card detail-card location-card">
+                        <div class="card-header">
+                            <div class="card-icon">📍</div>
+                            <h3 class="card-title">Live Location</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="location-info">
+                                <div class="info-item">
+                                    <span class="info-label">Latitude</span>
+                                    <span class="info-value" id="latitude">-</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Longitude</span>
+                                    <span class="info-value" id="longitude">-</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Accuracy</span>
+                                    <span class="info-value" id="accuracy">-</span>
+                                </div>
+                                <div class="info-item" id="geofenceItem" style="display: none;">
+                                    <span class="info-label">Geofence Status</span>
+                                    <span class="info-value" id="geofenceStatus">-</span>
+                                </div>
+                            </div>
+                            <div class="map-link-container">
+                                <a href="#" id="mapLink" target="_blank" class="map-link btn-neon btn-secondary">
+                                    View on Map
+                                </a>
+                            </div>
+                            <div class="place-name-display" id="placeNameDisplay" style="display: none;">
+                                <p class="place-name-text" id="placeName">-</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Registered Details Card -->
+                    <div class="glass-card detail-card details-card">
+                        <div class="card-header">
+                            <div class="card-icon">👤</div>
+                            <h3 class="card-title">Registered Details</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="details-grid">
+                                <div class="detail-row">
+                                    <span class="detail-label">Name:</span>
+                                    <span class="detail-text" id="touristName">-</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Email:</span>
+                                    <span class="detail-text" id="touristEmail">-</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Mobile:</span>
+                                    <span class="detail-text" id="touristMobile">-</span>
+                                    <a href="#" id="callTouristBtn" class="btn-call-tourist" style="display: none;">
+                                        📞 Call Tourist
+                                    </a>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Age:</span>
+                                    <span class="detail-text" id="touristAge">-</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Gender:</span>
+                                    <span class="detail-text" id="touristGender">-</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">City:</span>
+                                    <span class="detail-text" id="touristCity">-</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Address:</span>
+                                    <span class="detail-text" id="touristAddress">-</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Digital ID:</span>
+                                    <span class="detail-text" id="touristDigitalIDDisplay">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Last Updated Time Card -->
+                    <div class="glass-card detail-card time-card">
+                        <div class="card-header">
+                            <div class="card-icon">🕐</div>
+                            <h3 class="card-title">Last Updated</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="time-display">
+                                <div class="time-value" id="lastSeenTime">-</div>
+                                <div class="time-relative" id="lastSeenRelative">-</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Time at Location Card -->
+                    <div class="glass-card detail-card duration-card">
+                        <div class="card-header">
+                            <div class="card-icon">⏱️</div>
+                            <h3 class="card-title">Time at Location</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="duration-display">
+                                <div class="duration-value" id="timeAtLocation">-</div>
+                                <div class="duration-details" id="timeAtLocationDetails">-</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Current Place Selected Card -->
+                    <div class="glass-card detail-card place-card">
+                        <div class="card-header">
+                            <div class="card-icon">🏛️</div>
+                            <h3 class="card-title">Current Place Selected</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="place-info">
+                                <div class="place-item">
+                                    <span class="place-label">Country:</span>
+                                    <span class="place-value" id="selectedCountry">-</span>
+                                </div>
+                                <div class="place-item">
+                                    <span class="place-label">State:</span>
+                                    <span class="place-value" id="selectedState">-</span>
+                                </div>
+                                <div class="place-item">
+                                    <span class="place-label">City:</span>
+                                    <span class="place-value" id="selectedCity">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Results Message -->
+                <div id="noResultsMessage" class="no-results-message" style="display: none;">
+                    <div class="glass-card">
+                        <div class="no-results-content">
+                            <div class="no-results-icon">🔍</div>
+                            <h3>No Tourist Found</h3>
+                            <p>Please check the Digital ID and try again.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+

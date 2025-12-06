@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places - Yatra Lok</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Yatra Lok</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="tourist_login.html">Login</a></li>
+                <li><a href="tourist_signup.html" class="btn-primary">Sign Up</a></li>
+            </ul>
+            <div class="navbar-right">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <span class="theme-toggle-icon">🌙</span>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Places Section -->
+        <section class="places-section">
+            <div class="places-header">
+                <h2 class="section-title" id="placesTitle">Places</h2>
+                <p class="section-subtitle" id="placesSubtitle">Discover amazing places in your selected city</p>
+            </div>
+
+            <div class="places-grid" id="placesGrid">
+                <!-- Places will be dynamically loaded here -->
+            </div>
+
+            <div id="noPlacesMessage" class="no-places-message" style="display: none;">
+                <div class="glass-card">
+                    <div class="no-results-content">
+                        <div class="no-results-icon">📍</div>
+                        <h3>No Places Found</h3>
+                        <p>No places available for this category in the selected city.</p>
+                        <a href="categories.html" class="btn-neon btn-primary">Back to Categories</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+

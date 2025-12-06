@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatra Lok - Login Selection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Yatra Lok</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+            <div class="navbar-right">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <span class="theme-toggle-icon">🌙</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Login Selection Section -->
+        <section class="login-selection-section">
+            <div class="glass-card selection-card">
+                <h2 class="selection-title">Welcome to Yatra Lok</h2>
+                <p class="selection-subtitle">Choose your login type to continue</p>
+                
+                <div class="login-options">
+                    <!-- Tourist Login Card -->
+                    <div class="login-option-card tourist-card">
+                        <div class="login-icon">🧳</div>
+                        <h3>Tourist</h3>
+                        <p>Login as a tourist to explore places, track your journey, and discover amazing destinations</p>
+                        <div class="login-features">
+                            <span class="feature-tag">📍 Location Tracking</span>
+                            <span class="feature-tag">🗺️ Explore Places</span>
+                            <span class="feature-tag">🚨 SOS Support</span>
+                        </div>
+                        <a href="tourist_login.html" class="btn-neon btn-primary login-btn">
+                            Tourist Login
+                        </a>
+                        <p class="signup-link">Don't have an account? <a href="tourist_signup.html">Sign Up</a></p>
+                    </div>
+
+                    <!-- Administrator Login Card -->
+                    <div class="login-option-card admin-card">
+                        <div class="login-icon">👨‍💼</div>
+                        <h3>Administrator</h3>
+                        <p>Login as an administrator to monitor tourists, track locations, and manage the system</p>
+                        <div class="login-features">
+                            <span class="feature-tag">👥 Monitor Tourists</span>
+                            <span class="feature-tag">📍 Track Locations</span>
+                            <span class="feature-tag">📊 Dashboard</span>
+                        </div>
+                        <a href="admin_login.html" class="btn-neon btn-secondary login-btn">
+                            Admin Login
+                        </a>
+                        <p class="signup-link">Don't have an account? <a href="admin_register.html">Register</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="glass-card footer-card">
+                <p>&copy; 2025 Yatra Lok. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+
