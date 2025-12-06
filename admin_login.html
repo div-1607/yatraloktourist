@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Yatra Lok</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Yatra Lok</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="admin_login.html">Admin Login</a></li>
+                <li><a href="admin_register.html" class="btn-primary">Admin Register</a></li>
+            </ul>
+            <div class="navbar-right">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <span class="theme-toggle-icon">🌙</span>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Admin Login Form Section -->
+        <section class="form-section">
+            <div class="form-container">
+                <div class="glass-card form-card">
+                    <h2 class="form-title">Admin Login</h2>
+                    <p class="form-subtitle">Login to your admin account</p>
+                    
+                    <form class="admin-login-form" id="adminLoginForm">
+                        <!-- Admin ID -->
+                        <div class="form-group">
+                            <label for="adminID">Admin ID <span class="required">*</span></label>
+                            <input 
+                                type="text" 
+                                id="adminID" 
+                                name="adminID" 
+                                required 
+                                placeholder="Enter your Admin ID (e.g., AD12345)"
+                                autocomplete="off"
+                            >
+                        </div>
+
+                        <!-- Password -->
+                        <div class="form-group">
+                            <label for="adminPassword">Password <span class="required">*</span></label>
+                            <input 
+                                type="password" 
+                                id="adminPassword" 
+                                name="adminPassword" 
+                                required 
+                                placeholder="Enter your password"
+                            >
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn-neon btn-primary btn-submit">Login</button>
+                            <p class="form-footer-text">
+                                Don't have an admin account? <a href="admin_register.html">Register here</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+

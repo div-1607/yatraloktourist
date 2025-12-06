@@ -1,0 +1,48 @@
+{
+  "india": {
+    "maharashtra": ["mumbai", "pune", "nashik"],
+    "karnataka": ["bangalore", "mysore"],
+    "tamil-nadu": ["chennai", "coimbatore"],
+    "kerala": ["kochi", "thiruvananthapuram"],
+    "rajasthan": ["jaipur", "udaipur"],
+    "goa": ["panaji"],
+    "himachal-pradesh": ["shimla", "manali"],
+    "uttarakhand": ["dehradun", "rishikesh"],
+    "west-bengal": ["kolkata", "darjeeling"],
+    "gujarat": ["ahmedabad", "surat"],
+    "delhi": ["new-delhi"],
+    "punjab": ["amritsar"],
+    "uttar-pradesh": ["agra", "varanasi"],
+    "madhya-pradesh": ["bhopal"],
+    "andhra-pradesh": ["hyderabad", "vishakhapatnam"]
+  },
+  "usa": {
+    "california": ["los-angeles", "san-francisco"],
+    "new-york": ["new-york-city", "buffalo"],
+    "texas": ["houston", "dallas"],
+    "florida": ["miami"]
+  },
+  "uk": {
+    "england": ["london", "manchester"],
+    "scotland": ["edinburgh"]
+  },
+  "canada": {
+    "ontario": ["toronto"],
+    "british-columbia": ["vancouver"]
+  },
+  "australia": {
+    "new-south-wales": ["sydney"],
+    "victoria": ["melbourne"]
+  },
+  "france": { "ile-de-france": ["paris"] },
+  "germany": { "bavaria": ["munich"] },
+  "japan": { "tokyo": ["tokyo"] },
+  "thailand": { "bangkok": ["bangkok"] },
+  "singapore": { "singapore": ["singapore"] },
+  "maldives": { "maldives": ["male"] },
+  "dubai": { "dubai": ["dubai"] },
+  "nepal": { "bagmati": ["kathmandu"] },
+  "sri-lanka": { "western-province": ["colombo"] },
+  "indonesia": { "jakarta": ["jakarta"] }
+}
+{}

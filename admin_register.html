@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration - Yatra Lok</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Yatra Lok</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="admin_login.html">Admin Login</a></li>
+                <li><a href="admin_register.html" class="btn-primary">Admin Register</a></li>
+            </ul>
+            <div class="navbar-right">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <span class="theme-toggle-icon">🌙</span>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Admin Registration Form Section -->
+        <section class="form-section">
+            <div class="form-container">
+                <div class="glass-card form-card">
+                    <h2 class="form-title">Admin Registration</h2>
+                    <p class="form-subtitle">Register as an administrator for Yatra Lok</p>
+                    
+                    <form class="admin-register-form" id="adminRegisterForm">
+                        <!-- Name -->
+                        <div class="form-group">
+                            <label for="adminName">Name <span class="required">*</span></label>
+                            <input 
+                                type="text" 
+                                id="adminName" 
+                                name="adminName" 
+                                required 
+                                placeholder="Enter your full name"
+                            >
+                        </div>
+
+                        <!-- Mobile -->
+                        <div class="form-group">
+                            <label for="adminMobile">Mobile <span class="required">*</span></label>
+                            <input 
+                                type="tel" 
+                                id="adminMobile" 
+                                name="adminMobile" 
+                                required 
+                                placeholder="Enter your mobile number"
+                            >
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="adminEmail">Email <span class="required">*</span></label>
+                            <input 
+                                type="email" 
+                                id="adminEmail" 
+                                name="adminEmail" 
+                                required 
+                                placeholder="Enter your email address"
+                            >
+                        </div>
+
+                        <!-- City -->
+                        <div class="form-group">
+                            <label for="adminCity">City <span class="required">*</span></label>
+                            <input 
+                                type="text" 
+                                id="adminCity" 
+                                name="adminCity" 
+                                required 
+                                placeholder="Enter your city"
+                            >
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn-neon btn-primary btn-submit">Register</button>
+                            <p class="form-footer-text">
+                                Already have an admin account? <a href="admin_login.html">Login here</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+

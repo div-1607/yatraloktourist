@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Details - Yatra Lok</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Yatra Lok</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="tourist_login.html">Login</a></li>
+                <li><a href="tourist_signup.html" class="btn-primary">Sign Up</a></li>
+            </ul>
+            <div class="navbar-right">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <span class="theme-toggle-icon">🌙</span>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Place Details Section -->
+        <section class="place-details-section">
+            <div class="place-details-container">
+                <div class="glass-card place-card">
+                    <!-- Place Name -->
+                    <h1 class="place-name" id="placeName">Taj Mahal</h1>
+                    
+                    <!-- Status and Safety Row -->
+                    <div class="status-safety-row">
+                        <!-- Current Status -->
+                        <div class="status-badge" id="currentStatus">
+                            <span class="status-icon" id="statusIcon">●</span>
+                            <span class="status-text" id="statusText">OPEN</span>
+                        </div>
+                        
+                        <!-- Safety Indicator -->
+                        <div class="safety-indicator" id="safetyIndicator">
+                            <span class="safety-label">Safety:</span>
+                            <span class="safety-badge safety-green" id="safetyBadge">
+                                <span class="safety-dot"></span>
+                                Safe
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Location Info -->
+                    <div class="location-info-section">
+                        <div class="location-badge">
+                            <span class="location-icon">📍</span>
+                            <span id="locationText">-</span>
+                        </div>
+                    </div>
+
+                    <!-- Safety Analysis (Crowd Density) -->
+                    <div class="safety-analysis-section">
+                        <h3 class="section-heading">Safety Analysis</h3>
+                        <div class="crowd-density-card">
+                            <div class="crowd-density-header">
+                                <span class="crowd-label">Crowd Density:</span>
+                                <span class="crowd-status" id="crowdStatus">-</span>
+                            </div>
+                            <div class="crowd-indicator" id="crowdIndicator">
+                                <div class="crowd-bar">
+                                    <div class="crowd-fill" id="crowdFill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Details Grid -->
+                    <div class="details-grid">
+                        <!-- Opening Time -->
+                        <div class="detail-item">
+                            <div class="detail-icon">🕐</div>
+                            <div class="detail-content">
+                                <span class="detail-label">Opening Time</span>
+                                <span class="detail-value" id="openingTime">06:00 AM</span>
+                            </div>
+                        </div>
+
+                        <!-- Closing Time -->
+                        <div class="detail-item">
+                            <div class="detail-icon">🕐</div>
+                            <div class="detail-content">
+                                <span class="detail-label">Closing Time</span>
+                                <span class="detail-value" id="closingTime">07:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Start Journey Button -->
+                    <div class="journey-section">
+                        <button class="btn-neon btn-primary btn-journey" id="startJourneyBtn">
+                            <span class="journey-icon">🚀</span>
+                            Start Journey
+                        </button>
+                        <p class="journey-info" id="journeyStatus">Click to start live location tracking</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Floating SOS Button -->
+    <a href="tel:ADMIN_NUMBER" class="sos-button" id="sosButton">SOS</a>
+    
+    <script src="app.js"></script>
+</body>
+</html>
+

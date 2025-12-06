@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - Yatra Lok</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>Yatra Lok</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="tourist_login.html">Login</a></li>
+                <li><a href="tourist_signup.html" class="btn-primary">Sign Up</a></li>
+            </ul>
+            <div class="navbar-right">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <span class="theme-toggle-icon">🌙</span>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Categories Section -->
+        <section class="categories-section">
+            <div class="categories-header">
+                <h2 class="section-title">Explore Categories</h2>
+                <p class="section-subtitle">Choose a category to discover amazing places</p>
+            </div>
+
+            <div class="categories-grid">
+                <!-- Places -->
+                <button class="category-card glass-card" data-category="places">
+                    <div class="category-icon">📍</div>
+                    <h3 class="category-name">Places</h3>
+                </button>
+
+                <!-- Temples -->
+                <button class="category-card glass-card" data-category="temples">
+                    <div class="category-icon">🛕</div>
+                    <h3 class="category-name">Temples</h3>
+                </button>
+
+                <!-- Historical -->
+                <button class="category-card glass-card" data-category="historical">
+                    <div class="category-icon">🏛️</div>
+                    <h3 class="category-name">Historical</h3>
+                </button>
+
+                <!-- Shopping -->
+                <button class="category-card glass-card" data-category="shopping">
+                    <div class="category-icon">🛍️</div>
+                    <h3 class="category-name">Shopping</h3>
+                </button>
+
+                <!-- Old Town -->
+                <button class="category-card glass-card" data-category="old-town">
+                    <div class="category-icon">🏘️</div>
+                    <h3 class="category-name">Old Town</h3>
+                </button>
+
+                <!-- Beach -->
+                <button class="category-card glass-card" data-category="beach">
+                    <div class="category-icon">🏖️</div>
+                    <h3 class="category-name">Beach</h3>
+                </button>
+
+                <!-- Airports -->
+                <button class="category-card glass-card" data-category="airports">
+                    <div class="category-icon">✈️</div>
+                    <h3 class="category-name">Airports</h3>
+                </button>
+
+                <!-- Cafe / Restro -->
+                <button class="category-card glass-card" data-category="cafe-restro">
+                    <div class="category-icon">☕</div>
+                    <h3 class="category-name">Cafe / Restro</h3>
+                </button>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+
